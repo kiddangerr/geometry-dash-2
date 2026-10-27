@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ce3n0cf7x357q"]
+
+[ext_resource type="Script" uid="uid://8sbr647cggi7" path="res://geometrydash_2.gd" id="1_lvysq"]
+[ext_resource type="Texture2D" uid="uid://cxbi6rr5yfymg" path="res://gd/fundo2.png" id="1_xf0ks"]
+[ext_resource type="FontFile" uid="uid://cwadd7av68h60" path="res://gd/fast99.ttf" id="2_lvysq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47p3a"]
+texture = ExtResource("1_xf0ks")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf0ks"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oh3k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13uk7"]
+bg_color = Color(0.9882353, 0, 0.14901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvysq"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka73n"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jst4"]
+bg_color = Color(0.9882353, 0, 0.14901961, 1)
+
+[node name="Menu" type="Control" unique_id=21602971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lvysq")
+
+[node name="Fundo" type="Panel" parent="." unique_id=1303905823]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_47p3a")
+
+[node name="Título" type="Label" parent="." unique_id=512789212]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -248.0
+offset_right = 476.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_lvysq")
+theme_override_font_sizes/font_size = 109
+text = "Geometry dash 2"
+
+[node name="Botões" type="VBoxContainer" parent="." unique_id=842372063]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = 10.25
+offset_right = 99.0
+offset_bottom = 69.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Jogar" type="Button" parent="Botões" unique_id=39774217]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lvysq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xf0ks")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7oh3k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13uk7")
+text = "Jogar"
+
+[node name="Sair" type="Button" parent="Botões" unique_id=1992035912]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lvysq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lvysq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ka73n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1jst4")
+text = "Sair
+"
+
+[connection signal="pressed" from="Botões/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Botões/Sair" to="." method="_on_sair_pressed"]

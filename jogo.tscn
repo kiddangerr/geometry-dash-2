@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bqp0hrxloie2a"]
+
+[ext_resource type="Texture2D" uid="uid://5g1i7objd4ta" path="res://gd/fundo-gd.png" id="1_evvns"]
+[ext_resource type="Texture2D" uid="uid://bbsji2qqgkad6" path="res://gd/Gemini_Generated_Image_r3auj7r3auj7r3au.jpg" id="2_yq54j"]
+
+[node name="Jogo" type="Node2D" unique_id=1509717460]
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1844395685]
+scale = Vector2(1.0666667, 1.1868132)
+texture = ExtResource("1_evvns")
+centered = false
+
+[node name="Chao" type="Sprite2D" parent="." unique_id=1994989663]
+position = Vector2(-2.9999998, 575)
+scale = Vector2(0.45648733, 0.18249995)
+texture = ExtResource("2_yq54j")
+centered = false
+
+[node name="ChaoFisico" type="StaticBody2D" parent="." unique_id=844893669]
+
+[node name="CorpoChao" type="CollisionShape2D" parent="ChaoFisico" unique_id=293939894]

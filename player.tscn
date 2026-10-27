@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://766jsikflxl"]
+
+[ext_resource type="Texture2D" uid="uid://c63wcxhq5cmuh" path="res://gd/cubo.jpg" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y1v0"]
+size = Vector2(11, 10)
+
+[node name="Player" type="CharacterBody2D" unique_id=1758888378]
+
+[node name="ImagemPlayer" type="Sprite2D" parent="." unique_id=1346062039]
+position = Vector2(9.500001, 7)
+scale = Vector2(0.04661016, 0.045045044)
+texture = ExtResource("1_4flbx")
+
+[node name="CorpoPlayer" type="CollisionShape2D" parent="." unique_id=82766108]
+position = Vector2(9.5, 7)
+shape = SubResource("RectangleShape2D_5y1v0")
